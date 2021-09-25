@@ -8,6 +8,7 @@
 //<Подключаем шрифты>=======================================================================================
 //&display=swap&subset=cyrillic-ext
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700&display=swap&subset=cyrillic-ext);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular&display=swap&subset=cyrillic-ext);
 @import "fonts";
 //</Подключаем шрифты>=======================================================================================
 
@@ -91,9 +92,12 @@ body {
 
 	// .page__main-slider
 	&__main-slider {}
+
+	// .page__lots
+	&__lots {}
 }
 
-//===================================================================================================================================
+//=MAIN-SLIDER==================================================================================================================================
 .main-slider {
 	position: relative;
 
@@ -124,10 +128,16 @@ body {
 	&__content {
 		position: relative;
 		z-index: 10;
+		height: 100%;
 	}
 
 	// .item-main-slider__container
-	&__container {}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+	}
 
 	// .item-main-slider__bg
 	&__bg {
@@ -144,6 +154,7 @@ body {
 		line-height: calc(25 / 15);
 		color: #fff;
 
+		flex: 1 1 auto;
 		max-width: 700px;
 		margin: 25px auto 0;
 	}
@@ -222,6 +233,133 @@ body {
 		transform: rotate(-180deg);
 	}
 }
+
+//=LOTS=======================================================================================================================================================
+
+.lots {
+	padding: 85px 0px 63px 0px;
+
+	// .lots__container
+	&__container {}
+
+	// .lots__header
+	&__header {
+		margin: 0px 0px 40px 0px;
+	}
+
+	// .lots__slider
+	&__slider {}
+}
+
+.title {
+
+	// .title__item
+	&__item {}
+
+	// .title__main
+	&__main {}
+}
+
+.block-decor {
+
+	// .block-decor__items
+	&__items {}
+
+	// .block-decor__icon
+	&__icon {}
+}
+
+.slider-lots {
+
+	// .slider-lots__body
+	&__body {
+		margin: 0 -50px 50px;
+
+		.swiper-wrapper {
+			align-items: stretch;
+		}
+
+		@media (max-width: 970px) {
+			margin: 0 -15px 50px;
+		}
+	}
+
+	// .slider-lots__slide
+	&__slide {
+		padding: 0 50px;
+
+		@media (max-width: 970px) {
+			padding: 0 15px;
+		}
+	}
+
+	// .slider-lots__control
+	&__control {}
+}
+
+.control-slider-lots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	// .control-slider-lots__arrow
+	&__arrow {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		cursor: pointer;
+
+		span {
+			flex: 0 0 108px;
+			width: 108px;
+			height: 35px;
+			background: url('../img/lots/sl-arrow.svg') left no-repeat;
+			overflow: hidden;
+
+			@media (max-width: 450px) {
+				flex: 0 0 50px;
+			}
+		}
+
+		&::after {
+			content: '';
+			width: 11px;
+			height: 11px;
+			border-radius: 50%;
+			border: 1px solid #bb9c66;
+			margin: 0px 5px;
+		}
+
+		&:last-child {
+			flex-direction: row-reverse;
+
+			span {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+
+	// .control-slider-lots__link
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		color: #000;
+		font-family: "PFDin";
+		font-size: 21px;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		flex: 0 0 100px;
+		width: 100px;
+		height: 100px;
+		margin: 0px 20px;
+		background: url('../img/lots/circle.png') 0 0 no-repeat;
+	}
+}
+
+//========================================================================================================================================================
 
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================

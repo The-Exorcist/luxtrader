@@ -112,3 +112,58 @@ let mainSlider = new Swiper('.main-slider__body', {
 	//	el: '.swiper-scrollbar',
 	//},
 });
+
+let lotsSlider = new Swiper('.slider-lots__body', {
+	/*
+	effect: 'fade',
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false,
+	},
+	*/
+	observer: true,
+	observeParents: true,
+	slidesPerView: 3,
+	spaceBetween: 0,
+	// autoHeight: true,
+	speed: 800,
+	//touchRatio: 0,
+	//simulateTouch: false,
+	loop: true,
+	//preloadImages: false,
+	//lazy: true,
+	// Dotts
+	//pagination: {
+	//	el: '.slider-quality__pagging',
+	//	clickable: true,
+	//},
+	// Arrows
+	navigation: {
+		nextEl: '.control-slider-lots__arrow_next',
+		prevEl: '.control-slider-lots__arrow_prev',
+	},
+
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+
+		},
+		550: {
+			slidesPerView: 2,
+
+		},
+		768: {
+			slidesPerView: 3,
+		},
+	},
+
+	on: {
+		lazyImageReady: function () {
+			ibg();
+		},
+	}
+	// And if we need scrollbar
+	//scrollbar: {
+	//	el: '.swiper-scrollbar',
+	//},
+});
