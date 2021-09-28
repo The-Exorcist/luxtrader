@@ -1492,6 +1492,54 @@ let lotsSlider = new Swiper('.slider-lots__body', {
 	//	el: '.swiper-scrollbar',
 	//},
 });
+
+let quotesSlider = new Swiper('.slider-quotes__body', {
+	effect: 'fade',
+	// autoplay: {
+	// 	delay: 3000,
+	// 	disableOnInteraction: false,
+	// },
+	observer: true,
+	observeParents: true,
+	slidesPerView: 1,
+	spaceBetween: 0,
+	// autoHeight: true,
+	speed: 1000,
+	//touchRatio: 0,
+	//simulateTouch: false,
+	loop: true,
+	//preloadImages: false,
+	//lazy: true,
+	// Dotts
+	//pagination: {
+	//	el: '.slider-quality__pagging',
+	//	clickable: true,
+	//},
+	// Arrows
+	navigation: {
+		nextEl: '.control-slider-quotes__cirlce',
+	},
+
+	breakpoints: {
+		320: {
+			autoHeight: false,
+
+		},
+		570: {
+			autoHeight: false,
+		},
+	},
+
+	on: {
+		lazyImageReady: function () {
+			ibg();
+		},
+	}
+	// And if we need scrollbar
+	//scrollbar: {
+	//	el: '.swiper-scrollbar',
+	//},
+});
 let scr_body = document.querySelector('body');
 let scr_blocks = document.querySelectorAll('._scr-sector');
 let scr_items = document.querySelectorAll('._scr-item');
@@ -1792,8 +1840,8 @@ function _goto(target_block, speed, offset = 0) {
 	let header = '';
 	//OffsetHeader
 	//if (window.innerWidth < 992) {
-	//	header = 'header';
-	//}
+	header = 'header';
+
 	let options = {
 		speedAsDuration: true,
 		speed: speed,

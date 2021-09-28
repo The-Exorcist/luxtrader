@@ -1,5 +1,139 @@
-footer{}
-//====================================================================================================
+.footer {
+	padding: 45px 0px 35px;
+	background: #1c242a;
+
+	// .footer__content
+	&__content {
+		display: flex;
+
+		@media (max-width: 767px) {
+			display: block;
+			text-align: center;
+		}
+	}
+
+	// .footer__column
+	&__column {
+		&:first-child {
+			flex: 0 0 180px;
+		}
+
+		&_full {
+			flex: 1 1 auto;
+		}
+	}
+
+	// .footer__logo
+	&__logo {
+		display: inline-block;
+		margin: 0px 0px 25px 0px;
+
+		@media (max-width: 767px) {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	// .footer__info
+	&__info {
+		color: #bb9c66;
+
+		@media (max-width: 767px) {
+			margin: 25px 0px 0px 0px;
+		}
+	}
+
+	// .footer__menu
+	&__menu {
+		padding: 0 30px;
+
+		@media (max-width: 767px) {
+			padding: 0px 15px;
+			margin: 0px 0px 20px 0px;
+		}
+	}
+
+	// .footer__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+
+		li {
+			margin: 15px 15px 0px 0px;
+		}
+
+		@media (max-width: 767px) {
+			justify-content: center;
+			margin: 15px 7px 0px 7px;
+		}
+
+	}
+
+	// .footer__link
+	&__link {
+		color: #ffffff;
+		font-family: "PFDin";
+		font-weight: 500;
+		text-transform: uppercase;
+		letter-spacing: 1.4px;
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	// .footer__contacts
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		padding: 12px 0px 0px 0px;
+
+		@media (max-width: 767px) {
+			align-items: center;
+		}
+	}
+
+	// .footer__phone
+	&__phone {
+		display: flex;
+		align-items: flex-start;
+
+		color: #bb9c66;
+		font-family: "BravoRGRegular";
+		font-size: 50px;
+		text-transform: uppercase;
+		white-space: nowrap;
+
+		margin: 0px 0px 7px 0px;
+
+		small {
+			font-size: 25px;
+			margin: 2px 5px 0px 0px;
+		}
+
+		@media (max-width: 991px) {
+			font-size: 40px;
+
+			small {
+				font-size: 20px;
+			}
+		}
+	}
+
+	// .footer__callback
+	&__callback {
+		color: #bb9c66;
+		padding: 0px 0px 0px 13px;
+		background: url('../img/icons/callback-arrow.svg') left no-repeat;
+
+		span {
+			border-bottom: 1px dashed;
+		}
+	}
+}
 
 //====================================================================================================
 
+//====================================================================================================

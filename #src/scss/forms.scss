@@ -246,12 +246,18 @@ textarea {
 }
 
 .input {
-	border-radius: 0 !important;
-	width: 100%;
 	display: block;
-	padding: 0px 20px;
+	color: #4f4f4f;
+	font-size: 15px;
 
-	&._focus {}
+	width: 100%;
+	height: 100%;
+	padding: 0px 25px;
+	border-radius: 0 !important;
+
+	&._focus {
+		color: #000;
+	}
 
 	&._error {}
 }
